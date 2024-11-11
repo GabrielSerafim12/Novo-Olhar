@@ -16,6 +16,12 @@
     --subtitulo: #010851;
 }
 
+
+body{
+
+    overflow-x: hidden;
+}
+
 html {
     font-size: 62.5%;
     overflow-x: hidden;
@@ -26,6 +32,7 @@ html {
 section {
     padding: 2rem 9%;
 }
+
 
 .corpo {
     display: flex;
@@ -40,11 +47,9 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 6em;
+    height: 10%;
+    width: 100%;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     z-index: 1000;
     background: #fff;
     -webkit-box-shadow: -3px -7px 30px 0px rgba(0, 0, 0, 0.75);
@@ -53,12 +58,18 @@ section {
 }
 
 #cabecalho .link-home img {
-    height: 3em;
-    margin-left: 15em;
+    height: 4em;
+    margin-left: 35%;
 }
 
 #cabecalho .lista {
-    width: 45%;
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    margin-right: 5%;
 }
 
 #cabecalho .lista a {
@@ -87,7 +98,6 @@ section {
     border-radius: .5rem;
     background: #eee;
     color: var(--azul);
-    padding: 1rem 1.5rem;
     cursor: pointer;
     display: none;
 }
@@ -283,43 +293,7 @@ section {
     color: var(--ciano);
 }
 
-/* .video {
-    width: 100%;
-    height: 700px;
-    display: block;
-    margin-top: 10rem;
-    margin-left: 2rem;
-    position: relative;
-}
 
-.video video {
-    width: 80rem;
-    border: 15px solid var(--azul);
-    border-radius: 20px;
-}
-
-.video .descricao {
-    width: 60rem;
-    background: var(--amarelo);
-    height: 500px;
-    position: absolute;
-    top: 40px;
-    right: 18rem;
-    z-index: -1;
-    border: 15px solid var(--rosa);
-    border-radius: 20px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: right;
-}
-
-.video .descricao p {
-    font-size: 36px;
-    width: 300px;
-    margin-top: 40px;
-    font-weight: 500;
-    line-height: 1.5;
-} */
 
 .comentarios {
     margin-top: 2rem;
@@ -778,8 +752,9 @@ section {
 
 
 @media screen and (max-width: 1024px) {
+    
     html {
-        font-size: 55%;
+        font-size: 40%;
     }
 
     section {
@@ -929,7 +904,7 @@ section {
 @media screen and (max-width: 991px) {
 
     html {
-        font-size: 55%;
+        font-size: 40%;
     }
 
     section {
@@ -956,27 +931,6 @@ section {
         width: 80%;
     }
 
-    .video video {
-        width: 90%;
-        position: absolute;
-        left: 5rem;
-    }
-
-    .video .descricao {
-        width: 90%;
-        top: 30rem;
-        align-items: flex-end;
-        justify-content: center;
-        left: 5rem;
-        right: 0;
-    }
-
-    .video .descricao p {
-        width: 100%;
-        font-size: 25px;
-        margin-bottom: 30px;
-        margin-left: 30px;
-    }
 
     .companhia .anotacoes .parte-1 .mensagem::after {
         border-left: 20px solid var(--rosa);
@@ -1019,17 +973,20 @@ section {
 }
 
 @media screen and (max-width: 768px) {
+
     html {
-        scroll-padding-top: 0;
+        font-size: 40%;
     }
 
-    body {
-        padding-bottom: 6rem;
+    .corpo .container {
+        margin-left: 0; /* Remover margem que pode causar scroll */
+        width: 100%; /* Ajustar para a largura da tela */
     }
 
-    #cabecalho .link-home img{
-        margin-left: 1rem;
+    #cabecalho .link-home img {
+        margin-left: 0; /* Ajustar margens para evitar o overflow */
     }
+
 
     #menu-btn {
         display: initial;
@@ -1132,7 +1089,7 @@ section {
 @media screen and (max-width: 452px) {
 
     html {
-        font-size: 50%;
+        font-size: 40%;
     }
 
     #cabecalho .link-home img{
